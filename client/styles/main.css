@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
-    --primary-color: #0f1f1c;
+    --primary-color: #fff;
     --secondary-color: rgba(15, 31, 28, 0.5);
     --background-color: #f6f6f6;
     --accent-color: #ff6347; /* Example accent color */
@@ -23,11 +23,15 @@ body {
     padding: 0;
 }
 
+
+/* header */
+
 .header {
     position: relative;
     min-height: 940px;
     padding-top: 44px;
     background: linear-gradient(132.05deg, #428E5F -17.38%, #112120 78.4%), #204434;
+    overflow: hidden;
 }
 
 .header::after{
@@ -44,14 +48,72 @@ body {
 .header__top{
     margin-bottom: 86px;
 }
-.header__content{
-    max-width: 592px;
-}
-
 .header__top a {
     color: #fff;
     text-decoration: none;
 }
+
+.header__row{
+    display: flex;
+    
+}
+
+.header__content{
+    position: relative;
+    max-width: 592px;
+    z-index: 1;
+}
+
+.header__img {
+    position: relative;
+    flex-grow: 1;
+}
+
+.header__img img{
+    position: absolute;
+    top: -181px;
+    right: -90px;
+    max-width: unset;
+    width: 894px;
+    height: 940px;
+}
+
+
+.header__badge {
+    display: inline-block;
+    margin-bottom: 7px;
+    padding: 11px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.header__title {
+    margin-bottom: 30px;
+    font-size: 55px;
+}
+
+.header__text {
+    margin-bottom: 68px;
+    font-size: 25px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.5)
+}
+
+.header__btn {
+    display: inline-block;
+    padding: 27px 48px;
+    background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%), #ffff;
+    color: #fff;
+    border-radius: 27px;
+    font-size: 25px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* end header */
+
 /* NAV */
 
 .nav{
