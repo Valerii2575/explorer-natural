@@ -3,6 +3,7 @@
 
 :root {
     --primary-color: #fff;
+    --black-color: #0F1F1C;
     --secondary-color: rgba(15, 31, 28, 0.5);
     --background-color: #f6f6f6;
     --accent-color: #ff6347; /* Example accent color */
@@ -67,6 +68,7 @@ body {
 .header__img {
     position: relative;
     flex-grow: 1;
+    z-index: 0;
 }
 
 .header__img img{
@@ -137,6 +139,7 @@ body {
 
 .nav__list a {
     position: relative;
+    z-index: 999;
 }
 
 .nav__list a.active::after,
@@ -153,11 +156,13 @@ body {
 }
 
 .nav__login{
+    position: relative;
     display: flex;
     column-gap: 25px;
     font-size: 15px;
     font-weight: 500;
     align-items: center;
+    z-index: 999;
 }
 
 .nav__login 
@@ -185,4 +190,108 @@ body {
 .block {
     height: 200px;
     background-color: yellowgreen;
+}
+
+/* destinations */
+
+.destinations{
+    padding: 96px 0 100px;
+    overflow-x: hidden;
+}
+
+.destinations__row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 50px;
+}
+
+.destinations__content{
+    max-width: 456px;
+}
+
+.destinations__slider{
+    width: 1110px;
+    flex-shrink: 0;
+}
+
+.destinations__title{
+    font-size: 55px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--black-color);
+}
+
+.destinations__title span {
+    font-size: 30px
+}
+
+.destinations__text {
+    margin-bottom: 60px;
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+
+.btn-big {
+    display: inline-block;
+    padding: 25px 45px;
+    background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%), #ffff;
+    color: #fff;
+    border-radius: 27px;
+    font-size: 25px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* slider */
+
+.slider {
+    position: relative;
+}
+
+.slider__item{
+    margin-top: 27px;
+    width: 335px;
+    height: 402px;
+    object-fit: cover;
+    border-radius: 35px;
+    
+}
+
+.slider .center .slider__item {
+    margin-top: 0;
+    width: 380px;
+    height: 456px;
+    border-radius: 35px;
+}
+
+.slider__btn {
+    position: absolute;
+    top: 50%;    
+    transform: translateY(-50%);
+
+    display: block;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%), #ffff;
+
+}
+.slider__btn--prev {
+    left: -27px;
+    padding-left: 26px;
+    justify-content: flex-start;    
+    z-index: 9;
+}
+
+.slider__btn--next {    
+    padding-right: 26px;
+    justify-content: flex-end;
+    right: -27px;
+    z-index: 9;
 }
