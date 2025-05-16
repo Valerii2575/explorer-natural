@@ -17,3 +17,14 @@ $('.slider__btn--prev').click(function() {
 $('.slider__btn--next').click(function() {
     owl.trigger('next.owl.carousel');
 })
+
+// nav icon
+
+const navButton = document.querySelector('.nav__togle');
+const menuIcon = document.querySelector('.menu-icon');
+const nav = document.querySelector('.nav');
+
+navButton.onclick = function() {
+    nav.classList.toggle('nav--mobile');
+    menuIcon.classList.toggle('menu-icon--active');
+}
